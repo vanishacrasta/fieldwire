@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+  @import url('https://fonts.googleapis.com/css?family=Roboto');
+.App {
+  text-align: center;
+}
+
+
+
+.App-header {
+
+  background-size: 100%;
+  background: linear-gradient(to bottom,rgba(0,0,51,0),rgba(0,0,51,0)), url("Header-bg.jpg") repeat bottom center scroll;
+background: -webkit-linear-gradient(to bottom,rgba(0,0,51,0.45),rgba(0,0,51,1)), url("Header-bg.jpg") no-repeat bottom center scroll;
+background: -o-linear-gradient(to bottom,rgba(0,0,51,0.45),rgba(0,0,51,1)), url("Header-bg.jpg") no-repeat bottom center scroll;
+background: -moz-linear-gradient(to bottom,rgba(0,0,51,0.45),rgba(0,0,51,1)), url("Header-bg.jpg") no-repeat bottom center scroll;
+  height: 25rem;
+  padding: 20px;
+  color: white;
+}
+
+.App-content {
+  background: rgba(0,0,0,0.6);
+  height: 85%;
+  width: 75%;
+  margin: 0 auto;
+  border-radius:20px;
+  text-align: center;
+  }
+
+.App-content h1{
+ font-family: Playfair Display;
+font-size:3rem;
+  }
+
+.App-content input {
+    background: transparent;
+    border: 1px solid #ffa853;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 3px #ffa853;
+    color: white;
+    outline: none;
+    height:2rem;
+    width: 15rem;
+    max-width: inherit;
+  }
+
+  input::placeholder{
+    text-align:center;
+  }
+
+.App-content button{
+  font-family: Playfair Display;
+  text-align: center;
+  background:transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  outline:none;
+  height:2rem;
+}
+
+button:hover {
+background-color:rgba(0,0,0,0.5);
+
+}
+
+.App-intro{
+  color:black;
+}
+
+
+#wrapper {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+}
+
+#columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+.pin {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.pin img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+.pin p {
+	font: 12px/18px Arial, sans-serif;
+	color: #333;
+	margin: 0;
+}
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+}
+
+
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 10px;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+left:0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
